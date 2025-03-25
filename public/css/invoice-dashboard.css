@@ -1,0 +1,285 @@
+* {
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(12, 17, 25);
+}
+.dashboardContent {
+    width: 100vw;
+    height: 100vh;
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    padding:16px;
+}
+.dashboardTitle{
+    margin: 0 0 16px 0;
+    font-size:40px;
+}
+.aggregatedDataRow {
+    display:flex;
+    margin-bottom:16px;
+}
+.aggregatedDataContainer {
+    background: radial-gradient(circle at top left, #2a2f38, #1a1d22);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adds depth */
+    border-radius: 32px;
+    padding: 32px;
+    margin-right:16px;
+    display:flex;
+    flex-direction: column;
+    overflow:hidden;
+}
+.aggregatedDataContainer:last-child{
+    margin-right:0;
+}
+.aggregatedDataContainer.barChart{
+    padding:32px 32px 0 32px;
+}
+#overdueAggregatedContainer {
+    flex:2 1 0;
+}
+.aggregatedTotalsRow {
+    display:flex;
+    flex-direction: row;
+    border-bottom:1px solid rgba(255, 255, 255, 0.2);
+}
+.totalOverdueAmountContainer{
+    padding:0 0 16px 0;
+}
+.totalOverdueAmountTitle{
+    margin:0 0 16px 0;
+    color:white;
+    font-weight: lighter;
+}
+.totalOverdueAmountData{
+    color:white;
+    font-size:32px;
+    margin:0;
+}
+.agingBucketsRow{
+    display:flex;
+    flex-direction: row;
+    flex:1 1 0;
+    align-items: flex-end;
+}
+.agingBucket {
+    flex:1 1 0;
+}
+.agingBucket:last-child{
+    margin-right:0;
+}
+.agingBucket.barChart{
+    border-bottom:none;
+    border-top-left-radius:16px;
+    border-top-right-radius:16px;
+    height:100%;
+    display:flex;
+    justify-content: space-between;
+    flex-direction:column;
+    padding:8px;
+    transition-duration: 0.25s;
+}
+.agingBucket.barChart:nth-child(1){
+    height:85%;
+    background:rgba(0,0,0,0.6);
+}
+.agingBucket.barChart:nth-child(1):hover{
+    height:90%;
+}
+.agingBucket.barChart:nth-child(2){
+    height:75%;
+    background:rgba(0,0,0,0.45);
+}
+.agingBucket.barChart:nth-child(2):hover{
+    height:80%;
+}
+.agingBucket.barChart:nth-child(3){
+    height:65%;
+    background:rgba(0,0,0,0.3);
+}
+.agingBucket.barChart:nth-child(3):hover{
+    height:70%;
+}
+.agingBucketTitle{
+    color:white;
+}
+.agingBucketPoint{
+    color:white;
+    font-size:24px;
+}
+.agingBucket.barChart .agingBucketPoint,
+.agingBucket.barChart .agingBucketTitle{
+    margin:0;
+}
+#pendingApprovalAggregatedContainer {
+    flex:1 1 0;
+}
+.detailDataRow{
+    flex:2 1 0;
+    border-radius:32px;
+    display:flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: stretch;
+}
+#invoiceContainer{
+    flex:1 1 0;
+    display:flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+#invoiceListContainer {
+    flex: 1 1 0;
+    display: flex;
+    overflow-y: hidden;
+    margin-right: 16px;
+    flex-direction: column;
+    border-right:1px solid rgba(255,255,255,0.2);
+    padding-right:16px;
+}
+.elementTitle{
+    color:white;
+    font-weight:100;
+}
+#invoiceList{
+    overflow-y:scroll;
+}
+.invoiceItem{
+    padding:16px;
+    border-radius:40px;
+    color:white;
+    margin-bottom:8px;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.invoiceItem.selected{
+    color:black;
+    background:white;
+}
+.invoiceListDataPoint{
+    margin:0 0 8px 0;
+}
+.invoiceListDataPoint:last-child{
+    margin:0;
+}
+.invoiceListTotal{
+    font-size:24px;
+    margin:0;
+}
+#invoiceDetail {
+    flex:3 1 0;
+    display:flex;
+    flex-direction: column;
+}
+.invoiceInformation{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.invoiceTotal{
+    font-size:48px;
+    color:white;
+    margin:0;
+    flex:2 1 0;
+}
+.invoiceDataPoints{
+    display:flex;
+    flex-direction: row;
+    flex:5 1 0;
+}
+.invoiceDataPointContainer{
+    flex:1 1 0;
+    display:flex;
+    align-items: center;
+    margin-right:16px;
+}
+.invoiceDetailSvgContainer{
+    border:1px solid rgba(255,255,255,0.2);
+    height:40px;
+    width:40px;
+    border-radius:50%;
+    margin-right:8px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.invoiceDetailSvg{
+    fill:rgba(255,255,255,0.5);
+    height:100%;
+}
+.invoiceDetailSvg path{
+    stroke:rgba(255,255,255,0.5);
+}
+.invoiceDataPointTitle{
+    color:rgb(1,167,123);
+    font-size:12px;
+}
+.invoiceDataPoint{
+    color:white;
+    font-size:16px;
+}
+#invoiceLineItemList{
+    flex:1 1 0;
+    display:flex;
+    flex-direction: column;
+}
+.fillHeightTable {
+    display: flex;
+    flex-flow: column;
+    flex: 1 1 0;
+    text-align: left;
+    color:white;
+}
+.fillHeightTable tbody {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: auto;
+    border-collapse: collapse;
+}
+.fillHeightTable th{
+    font-weight:100;
+}
+.fillHeightTable th,
+.fillHeightTable td{
+    padding:8px;
+}
+.fillHeightRow:nth-child(even){
+    background:rgba(255,255,255,0.1);
+}
+.fillHeightRow {
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    border-bottom:1px solid rgba(255,255,255,0.2);
+}
+.smallPrefix{
+    font-size:0.5em;
+    color:rgb(1,167,123);
+}
+.mediumPrefix{
+    font-size:0.75em;
+    color:rgb(1,167,123);
+}
+.clickable{
+    cursor:pointer;
+}
+.hideScrollbar {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+.hideScrollbar::-webkit-scrollbar {
+    display: none;  /* Safari and Chrome */
+}
