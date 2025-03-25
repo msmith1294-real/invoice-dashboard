@@ -20,7 +20,7 @@ A Laravel and Livewire dashboard for tracking and managing invoice statuses, agg
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/invoice-dashboard.git
+   git clone https://github.com/msmith1294-real/invoice-dashboard.git
    cd invoice-dashboard
 
 2. Install dependencies:
