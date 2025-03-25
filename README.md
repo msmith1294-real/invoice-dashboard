@@ -53,7 +53,7 @@ A Laravel and Livewire dashboard for tracking and managing invoice statuses, agg
    laravel herd start
    ```
    
-   Or configure Nginx in your production environment.
+   Or configure Nginx in your environment.
   
 ## Usage
 - The dashboard will display high-level invoice data, and you can filter by time period or other aggregations.
